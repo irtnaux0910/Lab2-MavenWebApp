@@ -12,9 +12,9 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/irtnaux0910/Lab2-MavenWebApp' 
             }
         }
-        stage('Build maven project') {
+    stage('Build maven project') {
             steps {
-                sh 'mvn clean install'
+                bat 'mvn clean install' 
             }
         }
         stage('Docker build & login') {

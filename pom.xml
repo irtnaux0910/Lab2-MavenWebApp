@@ -31,5 +31,22 @@
                 <scope>provided</scope>
             </dependency>
     </dependencies>
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.2</version>
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+                <archive>
+                    <manifest>
+                        <mainClass>com.comp367.comp367webapp.Comp367WebappApplication</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 
 </project>
